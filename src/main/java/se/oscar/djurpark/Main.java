@@ -16,6 +16,7 @@ public class Main {
 
         while (run) {
             System.out.println("""
+                    
                     **************************
                     Welcome to the animal park
                     What would you like to do?
@@ -46,6 +47,32 @@ public class Main {
                     park.showAnimals();
                     break;
                 case 4:
+                    System.out.println("""
+                            Choose how you would like to search
+                            1: Search with name
+                            2: Search with age
+                            3: Search with gender
+                            4: Search with species""");
+                    switch (scan.nextInt()) {
+                        case 1:
+                            System.out.println("Enter the name of the animal: ");
+                            park.searchName(scan.next());
+                            break;
+                        case 2:
+                            System.out.println("Enter the age of the animal: ");
+                            park.searchAge(scan.nextInt());
+                            break;
+                        case 3:
+                            System.out.println("Enter the gender of the animal: ");
+                            park.searchGender(scan.next());
+                            break;
+                        case 4:
+                            System.out.println("Enter the species of the animal: ");
+                            park.searchSpecies(scan.next());
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 5:
                     System.out.println("Thanks for browsing our park, see you soon!");

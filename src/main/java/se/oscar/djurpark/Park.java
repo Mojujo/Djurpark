@@ -22,4 +22,36 @@ public class Park {
         }
         i = 0;
     }
+
+    public void searchName(String input) {
+        for (Animal a : animalList) {
+            if (input.contains(a.getName())) {
+                System.out.println(a);
+            }
+        }
+    }
+
+    public void searchAge(int input) {
+        for (Animal a : animalList) {
+            if (input == a.getAge()) {
+                System.out.println(a);
+            }
+        }
+    }
+
+    public void searchGender(String input) {
+        for (Animal a : animalList) {
+            if (input.contains(a.getGender())) {
+                System.out.println(a);
+            }
+        }
+    }
+
+    public void searchSpecies(String input) {
+        for (Animal a : animalList) {
+            if (input.contains(a.getSpecies())) {
+                System.out.println(a);
+            }
+        }
+    }
 }
